@@ -1,0 +1,3 @@
+It appears that 200_31 and 300_31 don't have a marker at the vent. It
+is located between the 11th and 12th markers. This is probably alright,
+since these trials are from early on and might not be of use.

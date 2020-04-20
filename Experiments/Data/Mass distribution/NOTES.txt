@@ -1,0 +1,42 @@
+80
+--
+mass fractions
+body: 93.6%
+tail: 7.1%
+
+VTL / SVL
+0.35
+
+
+87
+--
+mass fractions
+body: 95.7%
+tail: 5.0%
+
+VTL / SVL
+0.31
+
+
+92
+--
+mass fractions
+body: 95.8%
+tail: 4.9%
+
+VTL / SVL
+0.34
+
+
+# We need to summarize these
+
+b = np.r_[93.6, 95.7, 95.8]
+t = np.r_[7.1, 5, 4.9]
+b + t  # array([ 100.7,  100.7,  100.7])
+
+# so subtract .7/2 from both b and t
+b.mean(), b.std(): (94.683333333333337, 1.0143416036468651)
+t.mean(), t.std(): (5.3166666666666673, 1.0143416036468624)
+
+% in body: 94.7%
+% in tail: 5.3%

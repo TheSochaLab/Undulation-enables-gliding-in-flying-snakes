@@ -1,0 +1,24 @@
+Notes from Farid on Apr 27, 2017 about his tandem airfoil experiments
+
+
+Hi Isaac,
+
+Thanks, and I hope everything is fine with you too. Here are the lift and drag data for the single and tandem airfoils. Below is how these data are arranged in the variables.
+Regarding the actual flow fields, I have PIV data only for 20 cases indicated in Fig. 5 of my thesis. If you need any of those, please let me know, and I can send them to you.
+
+LD_single.mat contains three variables lift and drag, both having the size 15x7, and aoa having the size 1x15. The size of the matrices correspond to 15 angles of attack -10:5:60, and 7 Reynolds numbers 3000:2000:15000. The data is arranged in the ascending order, so that for instance, lift(12,5) is the lift coefficient at alpha = 45 deg and Re = 11000.
+The tandem experiments were done with two sets of combinations of upstream and downstream angles-of-attack: In the first set, the upstream angle-of-attack was kept fixed at 30 deg while the downstream angle-of-attack varied with alpha_d = 0, 20, 40, 60 deg; and in the second set, the upstream angle-of-attack varied with alpha_u = 0, 20, 40, 60 deg while the downstream angle-of-attack was kept fixed at 30 deg. For each combination of angles-of-attack, 6x4 combinations of horizontal gap and vertical stagger was considered: gap = 2, 4, 6, 8 chord lengths, and stagger = 0, 1, 2, 3, 4, 5 chord lengths.
+LD_tandem.mat contains eight variables containing the data for the lift and drag coefficients of the upstream and downstream airfoils measured with the first or second set of the angles-of-attack combination. Each variable has the size 6x4x4, with the first two indices respectively corresponding to the gap and stagger, and the third index corresponding to angle-of-attack of the varying airfoil. The data is arranged in the ascending order, so that for instance, lift_u_1(3,2,4) is the lift coefficient of the upstream airfoil with gap = 6 c, stagger = 1 c, alpha_u = 30 deg, and alpha_d = 60 deg; also, drag_d_2(2,4,1) is the drag coefficient of the downstream airfoil with gap = 4 c, stagger = 3 c, alpha_u = 0 deg, and alpha_d = 30 deg.
+Please let me know if anything remains unclear.
+
+Farid Jafari
+
+
+drag_d_1 = LD_tandem['drag_d_1']
+drag_d_2 = LD_tandem['drag_d_2']
+drag_u_1 = LD_tandem['drag_u_1']
+drag_u_2 = LD_tandem['drag_u_2']
+lift_d_1 = LD_tandem['lift_d_1']
+lift_d_2 = LD_tandem['lift_d_2']
+lift_u_1 = LD_tandem['lift_u_1']
+lift_u_2 = LD_tandem['lift_u_2']
